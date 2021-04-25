@@ -11,6 +11,24 @@
         <%= f.text_field :name, class: "form-control", placeholder: "Name of recipe", autofocus: true %>
       </div>
      </div>
+
+     <div class="form-group">
+       <div class="control-label col-md-2">
+         <%= f.label :event %>
+       </div>
+     <div class="col-md-8">
+        <%= f.text_field :event, class: "form-control", placeholder: "Type of recipe (Meal or Snack)", autofocus: true %>
+      </div>
+     </div>
+
+     <div class="form-group">
+       <div class="control-label col-md-2">
+         <%= f.label :preparation %>
+       </div>
+     <div class="col-md-8">
+        <%= f.text_area :preparation, rows: 10, class: "form-control", placeholder: "Enter Ingredient Preparation here..." %>
+      </div>
+     </div>
      
      <div class="form-group">
        <div class="control-label col-md-2">
