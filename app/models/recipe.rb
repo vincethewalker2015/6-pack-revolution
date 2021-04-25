@@ -1,6 +1,6 @@
 class Recipe < ApplicationRecord
   validates :name, presence: true
-  validates :description, presence: true, length: {minimum: 5, maximum: 500 }
+  validates :description, presence: true, length: {minimum: 5, maximum: 900 }
   validates :chef_id, presence: true # added as per test recipe_test.rb line10
   mount_uploader :picture, PictureUploader
   belongs_to :chef # use chef as the singular as 1 X Chef per recipe
