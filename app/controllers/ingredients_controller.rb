@@ -36,7 +36,7 @@ class IngredientsController < ApplicationController
   end
   
   def index
-    @ingredients = Ingredient.all
+    @ingredients = Ingredient.order(:name)
   end
   
   private
