@@ -32,10 +32,11 @@ class IngredientsController < ApplicationController
   
   def show
     @ingredient_recipes = @ingredient.recipes.paginate(page: params[:page], per_page: 5)
+    # @ingredient_recipes = @ingredient.recipes()
   end
   
   def index
-    @ingredients = Ingredient.paginate(page: params[:page], per_page: 5)
+    @ingredients = Ingredient.all
   end
   
   private
