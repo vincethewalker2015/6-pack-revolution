@@ -8,6 +8,8 @@ class Recipe < ApplicationRecord
   belongs_to :chef # use chef as the singular as 1 X Chef per recipe
   has_many :recipe_ingredients
   has_many :ingredients, through: :recipe_ingredients
+  has_many :recipe_categories
+  has_many :categories, through: :recipe_categories
   # has_many :comments, dependent: :destroy
   # has_many :likes, dependent: :destroy
   default_scope -> { order(updated_at: :desc) }  #this arranges the order of the recipess from most recent down
