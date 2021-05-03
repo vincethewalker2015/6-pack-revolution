@@ -1,6 +1,5 @@
 class Recipe < ApplicationRecord
   validates :name, presence: true
-  validates :event, presence: true
   validates :description, presence: true, length: {minimum: 5}
   validates :preparation, presence: true
   validates :chef_id, presence: true # added as per test recipe_test.rb line10
