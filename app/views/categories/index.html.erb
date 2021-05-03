@@ -1,0 +1,28 @@
+<h2 class="text-center page-title">Categories</h2>
+<div class="card card-shell text-center">
+    <% @categories.each do |cats| %>
+      
+        <div class="row justify-content-center">
+        
+        <div class="col-8 ">
+        <div class="">
+        <div class=""> <%#= link_to @chef.cats, chef_path(chefs) %></div>
+      <div class="">
+        <h3 class="well nav-col"><%= link_to cats.name, category_path(cats), class: "" %></h3>
+        <p class=""><%#= pluralize(cats.recipes.count, "Recipe")%></p>
+          <%= link_to "Show", category_path(cats), class: "btn btn-primary btn-lg nice_green" %> 
+          <% if logged_in? && current_chef.admin? %>
+            <%= link_to "Edit", edit_category_path(cats), class: "btn btn-primary btn-lg nice_green" %> 
+            <%= link_to "Delete", category_path(cats), class: "btn btn-primary btn-lg nice_green", method: :delete, data: {confirm: "Are you sure?"} %>
+          <% end %>
+      </div>
+      <div class="card-footer text-muted">
+        <small class="footer-text-index">Created <%= time_ago_in_words(cats.created_at) %> ago</small>
+      </div>
+      </div>
+    </div>  
+      </div>
+      
+      <br /><br /><br />
+    <% end %>
+</div>

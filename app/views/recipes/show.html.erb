@@ -1,5 +1,7 @@
-<%= render "shared/page_title", title: @recipe.name + " (" + @recipe.event + ")"%>
-<h4><%#= @recipe.event %></h4>
+<%= render "shared/page_title", title: @recipe.name %>
+<% if @recipe.categories.any? %>
+  <h3 class="text-center object-color-orange">Recipe Type: <%= render @recipe.categories %></h3>
+<% end %>
 <div class= "well col-md-8 col-md-offset-2">
   <h4 class= "description center"><strong>Ingredient Preparation: </strong></h4>
   <hr />
