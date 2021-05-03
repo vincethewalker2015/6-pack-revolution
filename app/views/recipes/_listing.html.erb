@@ -6,7 +6,7 @@
       </section>
     </div>
     <div class= "col-md-8 well <%= cycle('profile-green', '') %>">
-      <h4 class="dark-green"><%= link_to recipe.name, recipe_path(recipe) %></h4>
+      <h4 class="dark-green"><%= link_to recipe.name, recipe_path(recipe) %> (<%= render recipe.categories %>)</h4>
         <p><%= truncate(recipe.description, length: 150) %></p>
         <% if recipe.ingredients.any? %> <!-- The code below will enable all the ingredients to be displayed in Ingredients/show -->
           <p class="dark-green">Ingredients: <%= render recipe.ingredients %></p> <!-- Need to add an Ingredient partial -->
