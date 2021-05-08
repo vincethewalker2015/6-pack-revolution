@@ -17,8 +17,6 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-# Use 'will_paginate'for page separation
-gem 'will_paginate', '3.3.0'
 # Use Carrierwave for image uploads
 gem 'carrierwave', '2.2.1'
 gem 'mini_magick', '4.11.0'
